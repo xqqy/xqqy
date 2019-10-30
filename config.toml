@@ -1,0 +1,12 @@
+baseURL = "https://xqqy.github.io/"
+languageCode = "zh-cn"
+title = "注会191喵呜～"
+theme ="hyde"
+[params]
+  author = "xqqy"
+  description = "注会191通知还有其他杂项的小破站"
+  dateFormat = "2006年1月2日"
+[Menus]
+  main = [
+      {Name = "周安排", URL = "/周安排/"},
+  ]
