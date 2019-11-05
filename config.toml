@@ -8,7 +8,8 @@ theme ="hyde"
   dateFormat = "2006年1月2日"
 [Menus]
   main = [
-      {Name = "周安排", URL = "/周安排/"},
-      {Name = "各种资料", URL = "/各种资料/"},
-      {Name = "办事指南", URL = "/办事指南/"},
+      {Name = "周安排", URL = "/post/周安排/"},
+      {Name = "各种资料", URL = "/post/各种资料/"},
+      {Name = "办事指南", URL = "/post/办事指南/"},
+      {Name = "卫星观测", URL = "/post/卫星观测/"},
   ]
