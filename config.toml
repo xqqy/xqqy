@@ -9,4 +9,5 @@ theme ="hyde"
 [Menus]
   main = [
       {Name = "周安排", URL = "/周安排/"},
+      {Name = "各种资料", URL = "/各种资料/"},
   ]
