@@ -1,11 +1,60 @@
 baseURL = "https://xqqy.github.io/"
 languageCode = "zh-cn"
 title = "注会191喵呜～"
-theme ="hyde"
+theme ="cleanwhite"
+hasCJKLanguage = true
+
 [params]
   author = "xqqy"
-  description = "注会191通知还有其他杂项的小破站"
+  SEOTitle = "注会191班级网站"
+  description = "通知、资料还有卫星观测"
+  slogan = "喵呜～"
   dateFormat = "2006年1月2日"
+  title_404 = "你来到了没有猫咪的荒原 :("
+  showtoc = false
+  nextpost = false
+  
+  friends = true
+  bookmarks = true
+  [[params.bookmark_link]]
+  title =  "周安排"
+  href =  "post/周安排/"
+  [[params.bookmark_link]]
+  title =  "各种资料"
+  href =  "post/各种资料/"
+  [[params.bookmark_link]]
+  title =  "办事指南"
+  href =  "post/办事指南/"
+  [[params.bookmark_link]]
+  title =  "卫星观测"
+  href =  "post/卫星观测/"
+  
+  [[params.addtional_menus]]
+  title =  "周安排"
+  href =  "周安排/"
+  [[params.addtional_menus]]
+  title =  "各种资料"
+  href =  "各种资料/"
+  [[params.addtional_menus]]
+  title =  "办事指南"
+  href =  "办事指南/"
+  [[params.addtional_menus]]
+  title =  "卫星观测"
+  href =  "卫星观测/"
+  
+  [[params.friend_link]]
+  title = "北京工商大学官网"
+  href =  "https://www.btbu.edu.cn"
+  [[params.friend_link]]
+  title = "北京工商大学教务处"
+  href =  "https://jwc.btbu.edu.cn"
+  [[params.friend_link]]
+  title = "北京工商大学商学院"
+  href =  "https://sxy.btbu.edu.cn"
+  [[params.friend_link]]
+  title = "北京工商大学体育与艺术教学部"
+  href =  "https://sports.btbu.edu.cn"
+  
 [Menus]
   main = [
       {Name = "周安排", URL = "/post/周安排/"},
