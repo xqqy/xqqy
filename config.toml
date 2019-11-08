@@ -18,16 +18,16 @@ hasCJKLanguage = true
   bookmarks = true
   [[params.bookmark_link]]
   title =  "周安排"
-  href =  "post/周安排/"
+  href =  "周安排/"
   [[params.bookmark_link]]
   title =  "各种资料"
-  href =  "post/各种资料/"
+  href =  "各种资料/"
   [[params.bookmark_link]]
   title =  "办事指南"
-  href =  "post/办事指南/"
+  href =  "办事指南/"
   [[params.bookmark_link]]
   title =  "卫星观测"
-  href =  "post/卫星观测/"
+  href =  "卫星观测/"
   
   [[params.addtional_menus]]
   title =  "周安排"
@@ -57,8 +57,8 @@ hasCJKLanguage = true
   
 [Menus]
   main = [
-      {Name = "周安排", URL = "/post/周安排/"},
-      {Name = "各种资料", URL = "/post/各种资料/"},
-      {Name = "办事指南", URL = "/post/办事指南/"},
-      {Name = "卫星观测", URL = "/post/卫星观测/"},
+      {Name = "周安排", URL = "/周安排/"},
+      {Name = "各种资料", URL = "/各种资料/"},
+      {Name = "办事指南", URL = "/办事指南/"},
+      {Name = "卫星观测", URL = "/卫星观测/"},
   ]
