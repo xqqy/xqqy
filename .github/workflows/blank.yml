@@ -6,7 +6,7 @@ jobs:
   hugo-deploy-gh-pages:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@source
     - name: hugo-deploy-gh-pages
       uses: khanhicetea/gh-actions-hugo-deploy-gh-pages@master
       env:
