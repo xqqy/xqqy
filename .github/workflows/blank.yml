@@ -1,26 +1,15 @@
-name: github pages
+name: Deploy to GitHub Pages
 
-on:
-  push:
-    branches:
-    - source
+on: push
 
 jobs:
-  build-deploy:
-    runs-on: ubuntu-18.04
+  hugo-deploy-gh-pages:
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-      with:
-        submodules: true
-
-    - name: build
-      uses: peaceiris/actions-hugo@v0.58.1
-      with:
-        args: --gc --minify --cleanDestinationDir
-
-    - name: deploy
-      uses: peaceiris/actions-gh-pages@v2.2.0
+    - name: hugo-deploy-gh-pages
+      uses: khanhicetea/gh-actions-hugo-deploy-gh-pages@master
       env:
-        ACTIONS_DEPLOY_KEY: ${{ secrets.DEPLOY_TOKEN_MATTBAILEY }}
-        PUBLISH_BRANCH: master
-        PUBLISH_DIR: ./public
+        GIT_DEPLOY_KEY: ${{ secrets.GIT_DEPLOY_KEY }}
+        HUGO_VERSION: "0.59.1"
+        GITHUB_BRANCH: master
