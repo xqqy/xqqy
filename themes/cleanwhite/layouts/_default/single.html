@@ -92,11 +92,11 @@
                 col-md-10 col-md-offset-1
                 sidebar-container">
 
-                <!-- Featured Tags -->
-                {{ if .Site.Params.featured_tags }}
+                <!-- Featured Tags --> <!--要求onpage才在page上出现-->
+                {{ if (and (.Site.Params.featured_tags)  (.Site.Params.featured_tags_onpage)) }}
                 <section>
                     <hr class="hidden-sm hidden-xs">
-                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <h5><a href="/tags/">TAGS</a></h5>
                     <div class="tags">
                         {{ $featured_condition_size := .Site.Params.featured_condition_size }}
                         {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
