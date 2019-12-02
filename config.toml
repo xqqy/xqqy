@@ -13,6 +13,8 @@ hasCJKLanguage = true
   title_404 = "你来到了没有猫咪的荒原 :("
   showtoc = false
   nextpost = false
+
+  featured_tags=true
   
   friends = true
   bookmarks = true
@@ -47,13 +49,13 @@ hasCJKLanguage = true
   href =  "https://www.btbu.edu.cn"
   [[params.friend_link]]
   title = "北京工商大学教务处"
-  href =  "https://jwc.btbu.edu.cn"
+  href =  "http://jwc.btbu.edu.cn"
   [[params.friend_link]]
   title = "北京工商大学商学院"
-  href =  "https://sxy.btbu.edu.cn"
+  href =  "http://sxy.btbu.edu.cn"
   [[params.friend_link]]
   title = "北京工商大学体育与艺术教学部"
-  href =  "https://sports.btbu.edu.cn"
+  href =  "http://sports.btbu.edu.cn"
   
 [Menus]
   main = [
