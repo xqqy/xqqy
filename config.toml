@@ -30,6 +30,9 @@ hasCJKLanguage = true
   [[params.bookmark_link]]
   title =  "卫星观测"
   href =  "卫星观测/"
+  [[params.bookmark_link]]
+  title =  "抽签程序"
+  href =  "抽签程序/"
   
   [[params.addtional_menus]]
   title =  "周安排"
@@ -43,6 +46,9 @@ hasCJKLanguage = true
   [[params.addtional_menus]]
   title =  "卫星观测"
   href =  "卫星观测/"
+  [[params.addtional_menus]]
+  title =  "抽签程序"
+  href =  "抽签程序/"
   
   [[params.friend_link]]
   title = "北京工商大学官网"
