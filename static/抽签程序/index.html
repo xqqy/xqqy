@@ -59,7 +59,7 @@
 <script>
   var timer1,timer2;
 function timer1g(){
- var names=JSON.parse(document.getElementById("people").innerHTML)
+ var names=JSON.parse(document.getElementById("people").value)
             document.getElementById("names").innerHTML=names[Math.floor(Math.random()*names.length)];
             console.log(document.getElementById("names").innerHTML)
 }
