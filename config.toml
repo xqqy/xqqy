@@ -1,4 +1,4 @@
-baseURL = "https://xqqy.github.io/"
+baseURL = "https://xqqy.gitee.io/"
 languageCode = "zh-cn"
 title = "注会191喵呜～"
 theme ="cleanwhite"
@@ -9,7 +9,7 @@ hasCJKLanguage = true
   SEOTitle = "注会191班级网站"
   description = "通知、资料还有卫星观测"
   slogan = "喵呜～"
-  dateFormat = "2006年1月2日"
+  dateFormat = "1970年1月1日"
   title_404 = "你来到了没有猫咪的荒原 :("
   showtoc = false
   nextpost = false
