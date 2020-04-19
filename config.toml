@@ -70,3 +70,5 @@ hasCJKLanguage = true
       {Name = "办事指南", URL = "/办事指南/"},
       {Name = "卫星观测", URL = "/卫星观测/"},
   ]
+[markup]
+  defaultMarkdownHandler = "blackfriday"
