@@ -52,7 +52,7 @@ hasCJKLanguage = true
   
   [[params.friend_link]]
   title = "北京工商大学官网"
-  href =  "https://www.btbu.edu.cn"
+  href =  "http://www.btbu.edu.cn"
   [[params.friend_link]]
   title = "北京工商大学教务处"
   href =  "http://jwc.btbu.edu.cn"
