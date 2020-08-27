@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="注会191喵呜～">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://xqqy.gitee.io//">
+    <meta property="twitter:image" content="https://xqqy.gitee.io//" />
+    
+
+    
+    <meta name="title" content="如何使用VScode" />
+    <meta property="og:title" content="如何使用VScode" />
+    <meta property="twitter:title" content="如何使用VScode" />
+    
+
+    
+    <meta name="description" content="通知、资料还有卫星观测">
+    <meta property="og:description" content="通知、资料还有卫星观测" />
+    <meta property="twitter:description" content="通知、资料还有卫星观测" />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>如何使用VScode-注会191班级网站</title>
+
+    <link rel="canonical" href="/">
+
+    <link rel="stylesheet" href="/css/iDisqus.min.css"/>
+	
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    
+    <link rel="stylesheet" href="/css/syntax.css">
+    
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+    
+    
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    
+    
+
+    
+    
+    <script src="/js/jquery.min.js"></script>
+    
+    
+    <script src="/js/bootstrap.min.js"></script>
+    
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/docco.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    
+
+</head>
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">注会191喵呜～</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    
+		    
+                        <li><a href="/%e5%91%a8%e5%ae%89%e6%8e%92/">周安排</a></li>
+                    
+                        <li><a href="/%e5%90%84%e7%a7%8d%e8%b5%84%e6%96%99/">各种资料</a></li>
+                    
+                        <li><a href="/%e5%8a%9e%e4%ba%8b%e6%8c%87%e5%8d%97/">办事指南</a></li>
+                    
+                        <li><a href="/%e6%8a%bd%e7%ad%be%e7%a8%8b%e5%ba%8f/">抽签程序</a></li>
+                    
+
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/')
+    }
+</style>
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/%E5%A4%A7%E4%B8%80" title="大一">
+                            大一
+                        </a>
+                        
+                        <a class="tag" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF" title="计算机技术">
+                            计算机技术
+                        </a>
+                        
+                    </div>
+                    <h1>如何使用VScode</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        Posted by 
+                        
+                                注会191喵呜～
+                         
+                        on 
+                        Sunday, April 19, 2020
+                        
+                        
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                
+
+<p>众所周知，计算机技术这门课，让大家几乎是头发减半，痛不欲生。一不小心分号打成中文的啦，一个等号两个等号傻傻分不清楚，各种各样的该死的变量找不到，代码写的一团乱导致自己都懒得整理……</p>
+
+<p>也许，你需要一个相对现代一点的编辑器和编译器。如，广受同学们好评的VScode！</p>
+
+<blockquote>
+<p>关于编辑器和编译器，你可以自行百度一下“C语言教程”</p>
+</blockquote>
+
+<hr />
+
+<h2 id="vscode">VScode</h2>
+
+<p>作为一只前程序员，喵推荐使用由微软开发的Visual Studio Code（简称VScode）。对于我们的课程，通过稍微有点复杂（相对DEV-CPP来说）的配置，你可以轻易的得到一个能自动检查你代码大部分问题的编辑器。</p>
+
+<p>同时，VScode支持多种编程语言，包括我们之后会学到的Python和书写这篇网站的Markdown。一次劳苦四年受益，岂不美哉？</p>
+
+<p>在Windows上安装VScode并配置好用于编写C语言的环境教程如下：（使用Mac的同学，可联系班长为你安装；使用Linux的，你真的不会吗？）</p>
+
+<ol>
+<li>下载VScode并安装</li>
+<li>下载GCC</li>
+<li>配置VScode</li>
+</ol>
+
+<h3 id="下载vscode并安装">下载VScode并安装</h3>
+
+<p><a href="https://code.visualstudio.com/#">https://code.visualstudio.com/#</a></p>
+
+<p>选择最大的Download for windows即可！</p>
+
+<p>双击下载好的安装包，中间需要注意<strong>勾选“将Visual Studio Code添加到文件夹上下文</strong>，下一步按到底。完事啦</p>
+
+<h3 id="下载gcc">下载GCC</h3>
+
+<p>其实，在windows上它的全名叫mingw</p>
+
+<p>如果大家恰巧时间充沛，脑子够用。可以自行百度下载官网下载最新版。当然，这里喵提供了一个：<a href="../../计算机技术/mingw730_64.7z">mingw730_64.7z</a></p>
+
+<p>下载这个文件夹，将其解压到一个你喜欢的位置（注意，整个路径不得含有中文!）</p>
+
+<p>在任务栏底部找到搜索按钮，输入“环境变量”-打开“编辑系统环境变量”-在新弹出的窗口那里选择“环境变量”-在“&lt;你的用户名&gt;的环境变量”那里选择Path-新增-输入上面的文件夹的路径加上mingw730_64\bin</p>
+
+<p>它最后看起来应该是这样的：</p>
+
+<p><img src="../../计算机技术/gcc.jpg" alt="安装gcc" /></p>
+
+<h3 id="配置vscode">配置VScode</h3>
+
+<p>下载喵设置好了的<a href="../../计算机技术/c.zip">文件夹</a></p>
+
+<p>使用VScode打开这个文件夹，在侧边栏搜索处，将所有的“C:/Users/xqqy1/gcc/mingw730_64”替换为你上一步解压的位置（它的结尾应该也是/mingw730_64，需要把所有的‘\’换成‘/’）</p>
+
+<p><img src="../../计算机技术/vsc.jpg" alt="配置VScode" /></p>
+
+<h3 id="快来试试吧">快来试试吧！</h3>
+
+<p>每次编程的时候，只需要用VScode打开上一步创建的文件夹，即可编写代码啦！</p>
+
+<p>顺附赠一个喵操作的视频</p>
+
+<p><video src="../../计算机技术/vsc.webm" controls=1></p>
+
+<p>小提示：如果不喜欢VScode的默认黑色主题的话，在文件-首选项-颜色主题处可以选择下载超多好看的主题。字号设置则是在文件-首选项-设置里面</p>
+
+
+                
+
+                
+
+                
+<div id="disqus-comment"></div>
+
+
+
+            </div>
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                 
+                
+
+                
+                
+                <section>
+                    <hr>
+                    <h5>FRIENDS</h5>
+                    <ul class="list-inline">
+                        
+                        <li><a target="_blank" href="http://www.btbu.edu.cn">北京工商大学官网</a></li>
+                        
+                        <li><a target="_blank" href="http://jwc.btbu.edu.cn">北京工商大学教务处</a></li>
+                        
+                        <li><a target="_blank" href="http://sxy.btbu.edu.cn">北京工商大学商学院</a></li>
+                        
+                        <li><a target="_blank" href="http://sports.btbu.edu.cn">北京工商大学体育与艺术教学部</a></li>
+                        
+                    </ul>
+                </section>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                   
+                    
+                    
+                    
+                    
+                    
+
+                    
+
+		    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; 注会191喵呜～ 2020
+                    <br>
+                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        async("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    async("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+</body>
+</html>

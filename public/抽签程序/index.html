@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <title>注会191</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./libs/bootstrap.min.css">
+    <script src="./libs/jquery.min.js"></script>
+    <script src="./libs/bootstrap.min.js"></script>
+    <script src="./libs/cookie.js"></script>
+  </head>
+  <body>
+  
+  <nav class="navbar navbar-top navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only"> 
+                        <a class="navbar-brand" href="../">返回主页</a>
+                    </span>
+                </button>
+                <a class="navbar-brand" href="../">返回主页</a>
+            </div>
+        </div>
+    </nav>
+  
+  <div class="container">
+	<div class="row clearfix">
+		<div class="col-md-6 column">
+			<div class="page-header">
+				<h1>
+					喵喵抽签系统 <small>按姓名抽取</small>
+				</h1>
+			</div>
+			<h4 id="names">
+                姓名
+			</h4> 
+			<br>
+            <button type="button" id="stnames" class="btn btn-default" onclick="stname()">开始</button><br><br><br>
+            <textarea id="people"></textarea><br>
+		</div>
+		<div class="col-md-6 column">
+			<div class="page-header">
+				<h1>
+					喵喵抽签系统 <small>按编号抽取</small>
+				</h1>
+			</div>
+			<h4 id="nums">
+				0 
+			</h4> <br>
+			<button type="button" class="btn btn-default" id="stnums" onclick="stnum()">开始</button><br><br><br>
+			<input type="number" id="max" value="20"/><br>
+		</div>
+	</div>
+</div>
+  
+  </body>
+</html>
+
+<script>
+  var timer1,timer2;
+function timer1g(){
+ var names=JSON.parse(document.getElementById("people").value)
+            document.getElementById("names").innerHTML=names[Math.floor(Math.random()*names.length)];
+            console.log(document.getElementById("names").innerHTML)
+}
+function timer2g(){
+            document.getElementById("nums").innerHTML=Math.floor(Math.random()*parseInt(document.getElementById("max").value));
+            console.log(document.getElementById("nums").innerHTML)
+}
+function stname(){//开始抽取姓名
+  if(document.getElementById("stnames").innerHTML=="开始"){
+    timer1=window.setInterval(timer1g, 70);
+    document.getElementById("stnames").innerHTML="停止"
+  }else{
+    window.clearInterval(timer1);
+    document.getElementById("stnames").innerHTML="开始"
+  }
+}
+function stnum(){//开始抽取姓名
+  if(document.getElementById("stnums").innerHTML=="开始"){
+    timer2=window.setInterval(timer2g, 70);
+    document.getElementById("stnums").innerHTML="停止"
+  }else{
+    window.clearInterval(timer2);
+    document.getElementById("stnums").innerHTML="开始"
+  }
+}
+
+</script>
