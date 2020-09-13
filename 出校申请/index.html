@@ -66,6 +66,10 @@
                         id="FormSID" />
                 </div>
                 <div class="form-group">
+                    <label for="exampleInputPassword1">出校理由</label><input type="text" class="form-control"
+                        id="FormReason" />
+                </div>
+                <div class="form-group">
                     <label for="exampleInputPassword1">出校日期</label><input type="date" class="form-control"
                         id="FormOutDate" />
                 </div>
@@ -116,7 +120,7 @@
                     商学院注会191班；姓名：<span id="modalName"></span>；学号：<span id="modalUID"></span>；宿舍号：<span
                         id="modalSID"></span>；我申请于：<span id="modalOutDate"></span>&nbsp&nbsp&nbsp<span
                         id="modalOutTime"></span>到<span id="modalInDate"></span>&nbsp&nbsp&nbsp<span
-                        id="modalInTime"></span>出校，请予批准
+                        id="modalInTime"></span>因<span id="modalReason"></span>出校，请予批准
                     <br>
                     <br>
                     <br>
@@ -146,6 +150,7 @@
         $('#modalOutTime').text($('#FormOutTime').val())
         $('#modalInDate').text($('#FormInDate').val())
         $('#modalInTime').text($('#FormInTime').val())
+        $('#modalReason').text($('#FormReason').val())
         $('#myModal').modal('show')
 
     }
