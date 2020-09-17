@@ -31,8 +31,8 @@ hasCJKLanguage = true
   #title =  "卫星观测"
   #href =  "卫星观测/"
   [[params.bookmark_link]]
-  title =  "抽签程序"
-  href =  "抽签程序/"
+  title =  "出校申请"
+  href =  "出校申请/"
   
   [[params.addtional_menus]]
   title =  "周安排"
@@ -49,6 +49,9 @@ hasCJKLanguage = true
   [[params.addtional_menus]]
   title =  "抽签程序"
   href =  "抽签程序/"
+    [[params.addtional_menus]]
+  title =  "出校申请"
+  href =  "出校申请/"
   
   [[params.friend_link]]
   title = "北京工商大学官网"
@@ -69,6 +72,7 @@ hasCJKLanguage = true
       {Name = "各种资料", URL = "/各种资料/"},
       {Name = "办事指南", URL = "/办事指南/"},
       #{Name = "卫星观测", URL = "/卫星观测/"},
+      {Name = "出校申请", URL = "/出校申请/"},
   ]
 [markup]
   defaultMarkdownHandler = "blackfriday"
