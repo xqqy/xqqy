@@ -40,6 +40,10 @@
                         请假流程说明
                     </dt>
                     <dd>
+                        0、如在4小时以内，只需复制本段话并发给班长；收到“同意，已报学校备案”即可出校。
+                    </dd>
+                    <hr>
+                    <dd>
                         1、联络你的宿舍长（宿舍长联络班长）
                     </dd>
                     <dd>
@@ -120,16 +124,16 @@
                     <br>
                     <br>
                     <br>
-                    商学院注会191班；姓名：<span id="modalName"></span>；学号：<span id="modalUID"></span>；宿舍号：<span
+                    <span id="modalOutType"></span>商学院注会191班；姓名：<span id="modalName"></span>；学号：<span id="modalUID"></span>；宿舍号：<span
                         id="modalSID"></span>；我申请于：<span id="modalOutDate"></span>&nbsp&nbsp&nbsp<span
                         id="modalOutTime"></span>到<span id="modalInDate"></span>&nbsp&nbsp&nbsp<span
-                        id="modalInTime"></span>因<span id="modalReason"></span>出校，请予批准
+                        id="modalInTime"></span>因<span id="modalReason"></span>申请出校，请予批准
                     <br>
                     <br>
                     <br>
                     -------
                     <br>
-                    不要忘记填写问卷星系统<a href="https://www.wjx.top/jq/90857482.aspx">https://www.wjx.top/jq/90857482.aspx</a>
+                    <span id="modalWJX" style="font-weight: bold;"></span>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-dismiss="modal">OK
@@ -146,16 +150,77 @@
 
 <script>
     function updateform() {
-        $('#modalName').text($('#FormName').val())
-        $('#modalUID').text($('#FormUID').val())
-        $('#modalSID').text($('#FormSID').val())
-        $('#modalOutDate').text($('#FormOutDate').val())
-        $('#modalOutTime').text($('#FormOutTime').val())
-        $('#modalInDate').text($('#FormInDate').val())
-        $('#modalInTime').text($('#FormInTime').val())
-        $('#modalReason').text($('#FormReason').val())
-        $('#myModal').modal('show')
+        var OutTimeUnix=$.myTime.DateToUnix($('#FormOutDate').val()+' '+$('#FormOutTime').val()+":00");
+        var InTimeUnix=$.myTime.DateToUnix($('#FormInDate').val()+' '+$('#FormInTime').val()+":00");
+        if(InTimeUnix-OutTimeUnix <= 14400000){//四小时之内提示只报备
+            $('#modalOutType').text("四小时内出校申请：")
+            $('#modalWJX').text("申请在四个小时内，无需提交问卷星申请");
+        }else{
+            $('#modalOutType').text("四小时以上出校申请：")
+            $('#modalWJX').html('不要忘记填写问卷星系统<a href="https://www.wjx.top/jq/90857482.aspx">https://www.wjx.top/jq/90857482.aspx</a>')
+        }
+        $('#modalName').text($('#FormName').val());
+        $('#modalUID').text($('#FormUID').val());
+        $('#modalSID').text($('#FormSID').val());
+        $('#modalOutDate').text($('#FormOutDate').val());
+        $('#modalOutTime').text($('#FormOutTime').val());
+        $('#modalInDate').text($('#FormInDate').val());
+        $('#modalInTime').text($('#FormInTime').val());
+        $('#modalReason').text($('#FormReason').val());
+        $('#myModal').modal('show');
 
     }
+
+</script>
+
+<script>
+   
+
+   (function($) {
+        $.extend({
+            myTime: {
+                /**
+                 * 当前时间戳
+                 * @return <int>        unix时间戳(秒)
+                 */
+                CurTime: function(){
+                    return Date.parse(new Date())/1000;
+                },
+                /**
+                 * 日期 转换为 Unix时间戳
+                 * @param <string> 2014-01-01 20:20:20  日期格式
+                 * @return <int>        unix时间戳(秒)
+                 */
+                DateToUnix: function(string) {
+                    return Date.parse(string)
+                },
+                /**
+                 * 时间戳转换日期
+                 * @param <int> unixTime    待时间戳(秒)
+                 * @param <bool> isFull    返回完整时间(Y-m-d 或者 Y-m-d H:i:s)
+                 * @param <int>  timeZone   时区
+                 */
+                UnixToDate: function(unixTime, isFull, timeZone) {
+                    if (typeof (timeZone) == 'number')
+                    {
+                        unixTime = parseInt(unixTime) + parseInt(timeZone) * 60 * 60;
+                    }
+                    var time = new Date(unixTime * 1000);
+                    var ymdhis = "";
+                    ymdhis += time.getUTCFullYear() + "-";
+                    ymdhis += (time.getUTCMonth()+1) + "-";
+                    ymdhis += time.getUTCDate();
+                    if (isFull === true)
+                    {
+                        ymdhis += " " + time.getUTCHours() + ":";
+                        ymdhis += time.getUTCMinutes() + ":";
+                        ymdhis += time.getUTCSeconds();
+                    }
+                    return ymdhis;
+                }
+            }
+        });
+    })(jQuery);
+
 
 </script>
