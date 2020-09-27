@@ -37,7 +37,7 @@
                 </div>
                 <dl>
                     <dd>
-                        通常而言，只需正确填写时间，系统将自动给出出校申请流程。国庆放假无需申请。
+                        通常而言，只需正确填写时间，系统将自动给出出校申请流程。国庆放假不出京无需申请。
                     </dd>
                     <hr>
                     <dt>
@@ -70,35 +70,38 @@
                     </dt>
                 </dl>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">姓名</label><input type="text" class="form-control" id="FormName" />
+                    <label>姓名</label><input type="text" class="form-control" id="FormName" />
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1">学号</label><input type="text" class="form-control" id="FormUID" />
+                    <label>学号</label><input type="text" class="form-control" id="FormUID" />
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1">宿舍号</label><input type="text" class="form-control"
+                    <label>宿舍号</label><input type="text" class="form-control"
                         id="FormSID" />
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1">出校理由</label><input type="text" class="form-control"
+                    <label>出校理由</label><input type="text" class="form-control"
                         id="FormReason" />
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1">出校日期</label><input type="date" class="form-control"
+                    <label>出校日期</label><input type="date" class="form-control"
                         id="FormOutDate" />
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1">出校时间</label><input type="time" class="form-control"
+                    <label>出校时间</label><input type="time" class="form-control"
                         id="FormOutTime" />
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1">返校时间</label><input type="date" class="form-control"
+                    <label>返校时间</label><input type="date" class="form-control"
                         id="FormInDate" />
                 </div>
 
                 <div class="form-group">
-                    <label for="exampleInputPassword1">返校时间</label><input type="time" class="form-control"
+                    <label>返校时间</label><input type="time" class="form-control"
                         id="FormInTime" />
+                </div>
+                <div class="form-group">
+                    <label>强制使用标准请假流程<input type="checkbox"  id="FormForce" /></label>
                 </div>
                 <button type="submit" class="btn btn-default" onclick="updateform()">生成</button>
             </div>
@@ -159,8 +162,15 @@
     function updateform() {
         var OutTimeUnix=$.myTime.DateToUnix($('#FormOutDate').val()+' '+$('#FormOutTime').val()+":00");
         var InTimeUnix=$.myTime.DateToUnix($('#FormInDate').val()+' '+$('#FormInTime').val()+":00");
-        if(InTimeUnix-OutTimeUnix <= 14400000){//四小时之内提示只报备
-            $('#modalOutType').text("四小时内出校申：")
+        if(InTimeUnix-OutTimeUnix <= 14400000 && !$('#FormForce').is(':checked')){//四小时之内提示只报备，晚于23点不予批准。
+            $('#modalOutType').text("四小时内出校申请：")
+            if($('#FormInTime').val().split(':')[0]==23 || $('#FormInTime').val().split(':')[0]==00){
+                $('#modalWJX').text('申请返校时间晚于23：00，不予批准！如确需请求，请勾选“强制使用标准请假流程”');
+                $('#myModal').modal('show');
+                return;
+            }else{
+
+            }
             $('#modalWJX').html('申请在四个小时内，向宿舍长复制上述文字后收到“同意，已报学校备案”;将截图上传至此即可出校<a href="https://www.wjx.cn/jq/92417424.aspx">https://www.wjx.cn/jq/92417424.aspx</a>');
         }else{
             $('#modalOutType').text("四小时以上出校申请：")
