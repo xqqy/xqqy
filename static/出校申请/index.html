@@ -32,17 +32,24 @@
 
                 <div class="page-header">
                     <h1>
-                        莫的智慧请假文本生成系统<small>Powered by xqqy</small>
+                        莫的智慧请假文本生成系统Ver20200927<small>Powered by xqqy</small>
                     </h1>
                 </div>
                 <dl>
-                    <dt>
-                        请假流程说明
-                    </dt>
                     <dd>
-                        0、如在4小时以内，只需复制本段话并发给班长；收到“同意，已报学校备案”即可出校。
+                        通常而言，只需正确填写时间，系统将自动给出出校申请流程。国庆放假无需申请。
                     </dd>
                     <hr>
+                    <dt>
+                        四小时内快速出校审批：
+                    </dt>
+                    <dd>
+                        0、如在4小时以内，只需复制本段话并发给宿舍长；收到“同意，已报学校备案”并截图传问卷星系统<a href="https://www.wjx.cn/jq/92417424.aspx">https://www.wjx.cn/jq/92417424.aspx</a>即可出校。
+                    </dd>
+                    <hr>
+                    <dt>
+                        四小时以上标准出校审批（默认于每周一自动销假）：
+                    </dt>
                     <dd>
                         1、联络你的宿舍长（宿舍长联络班长）
                     </dd>
@@ -117,7 +124,7 @@
                     </h4>
                 </div>
                 <div class="modal-body">
-                    将下面的这段话复制给宿舍长并截图给班长
+                    下面为生成的请假申请信息
                     <br>
                     -------
 
@@ -153,11 +160,11 @@
         var OutTimeUnix=$.myTime.DateToUnix($('#FormOutDate').val()+' '+$('#FormOutTime').val()+":00");
         var InTimeUnix=$.myTime.DateToUnix($('#FormInDate').val()+' '+$('#FormInTime').val()+":00");
         if(InTimeUnix-OutTimeUnix <= 14400000){//四小时之内提示只报备
-            $('#modalOutType').text("四小时内出校申请：")
-            $('#modalWJX').text("申请在四个小时内，无需提交问卷星申请");
+            $('#modalOutType').text("四小时内出校申：")
+            $('#modalWJX').html('申请在四个小时内，向宿舍长复制上述文字后收到“同意，已报学校备案”;将截图上传至此即可出校<a href="https://www.wjx.cn/jq/92417424.aspx">https://www.wjx.cn/jq/92417424.aspx</a>');
         }else{
             $('#modalOutType').text("四小时以上出校申请：")
-            $('#modalWJX').html('不要忘记填写问卷星系统<a href="https://www.wjx.top/jq/90857482.aspx">https://www.wjx.top/jq/90857482.aspx</a>')
+            $('#modalWJX').html('请填写填写问卷星系统<a href="https://www.wjx.top/jq/90857482.aspx">https://www.wjx.top/jq/90857482.aspx</a>和掌上北工商请假信息。截图发送给班长并等候审批。返校后需填写<a href="https://www.wjx.cn/jq/91718594.aspx">https://www.wjx.cn/jq/91718594.aspx</a>以销假。')
         }
         $('#modalName').text($('#FormName').val());
         $('#modalUID').text($('#FormUID').val());
