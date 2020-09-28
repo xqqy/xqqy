@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>注会191喵呜～</title>
@@ -6,7 +6,11 @@
     <description>Recent content on 注会191喵呜～</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 21 Aug 2020 19:39:03 +0800</lastBuildDate><atom:link href="https://xqqy.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 Aug 2020 19:39:03 +0800</lastBuildDate>
+    
+	<atom:link href="https://xqqy.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>大二开学</title>
       <link>https://xqqy.github.io/post/%E5%A4%A7%E4%BA%8C%E5%BC%80%E5%AD%A6/</link>
@@ -166,7 +170,7 @@
       <pubDate>Mon, 28 Oct 2019 19:15:40 +0800</pubDate>
       
       <guid>https://xqqy.github.io/%E5%91%A8%E5%AE%89%E6%8E%92/</guid>
-      <description>第2周 周安排 本周二12：50-13：50开班委重选会 综合测评最后签字确认 部分同学参加国家奖学金评选 作业事项 线性代数:17(3), 22, 24, 25(2</description>
+      <description>第3周 周安排 班级团组织学习上级党组织入党有关事宜 国庆作业一并在此呈现 作业事项 线性代数：P36-题36/38/42（2）（6）/45 成本会计：</description>
     </item>
     
   </channel>
