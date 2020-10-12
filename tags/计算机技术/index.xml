@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>计算机技术 on 注会191喵呜～</title>
-    <link>https://xqqy.gitee.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/</link>
+    <link>https://xqqy.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/</link>
     <description>Recent content in 计算机技术 on 注会191喵呜～</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 19 Apr 2020 11:15:39 +0800</lastBuildDate><atom:link href="https://xqqy.gitee.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Apr 2020 11:15:39 +0800</lastBuildDate><atom:link href="https://xqqy.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>如何使用VScode</title>
-      <link>https://xqqy.gitee.io/post/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8vscode/</link>
+      <link>https://xqqy.github.io/post/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8vscode/</link>
       <pubDate>Sun, 19 Apr 2020 11:15:39 +0800</pubDate>
       
-      <guid>https://xqqy.gitee.io/post/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8vscode/</guid>
+      <guid>https://xqqy.github.io/post/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8vscode/</guid>
       <description>众所周知，计算机技术这门课，让大家几乎是头发减半，痛不欲生。一不小心分号打成中文的啦，一个等号两个等号傻傻分不清楚，各种各样的该死的变量找不</description>
     </item>
     
