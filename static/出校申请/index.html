@@ -32,7 +32,7 @@
 
                 <div class="page-header">
                     <h1>
-                        莫的智慧请假文本生成系统Ver20200927+<small>Powered by xqqy</small>
+                        莫的智慧请假文本生成系统Ver20201026<small>Powered by xqqy</small>
                     </h1>
                 </div>
                 <dl>
@@ -41,14 +41,15 @@
                     </dd>
                     <hr>
                     <dt>
-                        四小时内快速出校审批：
+                        四小时内快速出校审批（有课的时候不批！）：
                     </dt>
                     <dd>
-                        0、如在4小时以内，只需复制本段话并发给宿舍长；收到“同意，已报学校备案”并截图传问卷星系统<a href="https://www.wjx.cn/jq/92417424.aspx">https://www.wjx.cn/jq/92417424.aspx</a>即可出校。
+                        0、如在4小时以内，只需复制本段话并发给宿舍长；收到“同意，已报学校备案”并截图传问卷星系统<a
+                            href="https://www.wjx.cn/jq/92417424.aspx">https://www.wjx.cn/jq/92417424.aspx</a>即可出校。
                     </dd>
                     <hr>
                     <dt>
-                        四小时以上标准出校审批（默认于每周一自动销假）：
+                        四小时以上标准出校审批（默认于每周一自动销假，每周记得回来写问卷星！提前一天请假！！！）：
                     </dt>
                     <dd>
                         1、联络你的宿舍长（宿舍长联络班长）
@@ -63,7 +64,8 @@
                         4、填写问卷星系统<a href="https://www.wjx.top/jq/90857482.aspx">https://www.wjx.top/jq/90857482.aspx</a>
                     </dd>
                     <dd>
-                        5、在返校后，填写<a href="https://www.wjx.cn/jq/91718594.aspx">https://www.wjx.cn/jq/91718594.aspx</a>以销假。如需第二天再请假出去请联络班长。
+                        5、在返校后，填写<a
+                            href="https://www.wjx.cn/jq/91718594.aspx">https://www.wjx.cn/jq/91718594.aspx</a>以销假。如需第二天再请假出去请联络班长。
                     </dd>
                     <dt>
                         如有疑问，请联络班长
@@ -76,32 +78,26 @@
                     <label>学号</label><input type="text" class="form-control" id="FormUID" />
                 </div>
                 <div class="form-group">
-                    <label>宿舍号</label><input type="text" class="form-control"
-                        id="FormSID" />
+                    <label>宿舍号</label><input type="text" class="form-control" id="FormSID" />
                 </div>
                 <div class="form-group">
-                    <label>出校理由</label><input type="text" class="form-control"
-                        id="FormReason" />
+                    <label>出校理由</label><input type="text" class="form-control" id="FormReason" />
                 </div>
                 <div class="form-group">
-                    <label>出校日期</label><input type="date" class="form-control"
-                        id="FormOutDate" />
+                    <label>出校日期</label><input type="date" class="form-control" id="FormOutDate" />
                 </div>
                 <div class="form-group">
-                    <label>出校时间</label><input type="time" class="form-control"
-                        id="FormOutTime" />
+                    <label>出校时间</label><input type="time" class="form-control" id="FormOutTime" />
                 </div>
                 <div class="form-group">
-                    <label>返校时间</label><input type="date" class="form-control"
-                        id="FormInDate" />
+                    <label>返校时间</label><input type="date" class="form-control" id="FormInDate" />
                 </div>
 
                 <div class="form-group">
-                    <label>返校时间</label><input type="time" class="form-control"
-                        id="FormInTime" />
+                    <label>返校时间</label><input type="time" class="form-control" id="FormInTime" />
                 </div>
                 <div class="form-group">
-                    <label>强制使用标准请假流程<input type="checkbox"  id="FormForce" /></label>
+                    <label>禁用自动批准预检测和快速请假流程<input type="checkbox" id="FormForce" /></label>
                 </div>
                 <button type="submit" class="btn btn-default" onclick="updateform()">生成</button>
             </div>
@@ -134,10 +130,11 @@
                     <br>
                     <br>
                     <br>
-                    <span id="modalOutType"></span>商学院注会191班；姓名：<span id="modalName"></span>；学号：<span id="modalUID"></span>；宿舍号：<span
-                        id="modalSID"></span>；我申请于：<span id="modalOutDate"></span>&nbsp&nbsp&nbsp<span
-                        id="modalOutTime"></span>到<span id="modalInDate"></span>&nbsp&nbsp&nbsp<span
-                        id="modalInTime"></span>因<span id="modalReason"></span>申请出校，请予批准
+                    <span id="modalOutType"></span>商学院注会191班；姓名：<span id="modalName"></span>；学号：<span
+                        id="modalUID"></span>；宿舍号：<span id="modalSID"></span>；我申请于：<span
+                        id="modalOutDate"></span>&nbsp&nbsp&nbsp<span id="modalOutTime"></span>到<span
+                        id="modalInDate"></span>&nbsp&nbsp&nbsp<span id="modalInTime"></span>因<span
+                        id="modalReason"></span>申请出校，请予批准
                     <br>
                     <br>
                     <br>
@@ -160,19 +157,30 @@
 
 <script>
     function updateform() {
-        var OutTimeUnix=$.myTime.DateToUnix($('#FormOutDate').val()+' '+$('#FormOutTime').val()+":00");
-        var InTimeUnix=$.myTime.DateToUnix($('#FormInDate').val()+' '+$('#FormInTime').val()+":00");
-        if(InTimeUnix-OutTimeUnix <= 14400000 && !$('#FormForce').is(':checked')){//四小时之内提示只报备，晚于23点不予批准。
+        var OutTimeUnix = $.myTime.DateToUnix($('#FormOutDate').val() + ' ' + $('#FormOutTime').val() + ":00");
+        var InTimeUnix = $.myTime.DateToUnix($('#FormInDate').val() + ' ' + $('#FormInTime').val() + ":00");
+        if ($('#FormInTime').val().split(':')[0] < $('#FormOutTime').val().split(':')[0] && !$('#FormForce').is(':checked')) {//时间不对
+            $('#modalWJX').text('系统检测到返校时间比出校时间还早，请检查上下午设置');
+            $('#modalWJX').css('color','red');
+            $('#myModal').modal('show');
+            return;
+        }
+        /*if () {//标准流程请当天的假
+            $('#modalWJX').text('系统检测到返校时间比出校时间还早，请检查上下午设置');
+            $('#modalWJX').css('color','red');
+            $('#myModal').modal('show');
+            return;
+        }*/
+        if (InTimeUnix - OutTimeUnix <= 14400000 && !$('#FormForce').is(':checked')) {//四小时之内提示只报备，晚于23点不予批准。
             $('#modalOutType').text("四小时内出校申请：")
-            if($('#FormInTime').val().split(':')[0]==23 || $('#FormInTime').val().split(':')[0]==00){
-                $('#modalWJX').text('申请返校时间晚于23：00，不予批准！如确需请求，请勾选“强制使用标准请假流程”');
+            if ($('#FormInTime').val().split(':')[0] == 23 || $('#FormInTime').val().split(':')[0] == 00) {
+                $('#modalWJX').text('申请返校时间晚于23：00，不予批准！如确需请求，请勾选“禁用自动批准预检测和快速请假流程”');
+                $('#modalWJX').css('color','red');
                 $('#myModal').modal('show');
                 return;
-            }else{
-
             }
             $('#modalWJX').html('申请在四个小时内，向宿舍长复制上述文字后收到“同意，已报学校备案”;将截图上传至此即可出校<a href="https://www.wjx.cn/jq/92417424.aspx">https://www.wjx.cn/jq/92417424.aspx</a>');
-        }else{
+        } else {
             $('#modalOutType').text("四小时以上出校申请：")
             $('#modalWJX').html('请填写填写问卷星系统<a href="https://www.wjx.top/jq/90857482.aspx">https://www.wjx.top/jq/90857482.aspx</a>和掌上北工商请假信息。截图发送给班长并等候审批。返校后需填写<a href="https://www.wjx.cn/jq/91718594.aspx">https://www.wjx.cn/jq/91718594.aspx</a>以销假。')
         }
@@ -191,24 +199,24 @@
 </script>
 
 <script>
-   
 
-   (function($) {
+
+    (function ($) {
         $.extend({
             myTime: {
                 /**
                  * 当前时间戳
                  * @return <int>        unix时间戳(秒)
                  */
-                CurTime: function(){
-                    return Date.parse(new Date())/1000;
+                CurTime: function () {
+                    return Date.parse(new Date()) / 1000;
                 },
                 /**
                  * 日期 转换为 Unix时间戳
                  * @param <string> 2014-01-01 20:20:20  日期格式
                  * @return <int>        unix时间戳(秒)
                  */
-                DateToUnix: function(string) {
+                DateToUnix: function (string) {
                     return Date.parse(string)
                 },
                 /**
@@ -217,18 +225,16 @@
                  * @param <bool> isFull    返回完整时间(Y-m-d 或者 Y-m-d H:i:s)
                  * @param <int>  timeZone   时区
                  */
-                UnixToDate: function(unixTime, isFull, timeZone) {
-                    if (typeof (timeZone) == 'number')
-                    {
+                UnixToDate: function (unixTime, isFull, timeZone) {
+                    if (typeof (timeZone) == 'number') {
                         unixTime = parseInt(unixTime) + parseInt(timeZone) * 60 * 60;
                     }
                     var time = new Date(unixTime * 1000);
                     var ymdhis = "";
                     ymdhis += time.getUTCFullYear() + "-";
-                    ymdhis += (time.getUTCMonth()+1) + "-";
+                    ymdhis += (time.getUTCMonth() + 1) + "-";
                     ymdhis += time.getUTCDate();
-                    if (isFull === true)
-                    {
+                    if (isFull === true) {
                         ymdhis += " " + time.getUTCHours() + ":";
                         ymdhis += time.getUTCMinutes() + ":";
                         ymdhis += time.getUTCSeconds();
