@@ -32,7 +32,7 @@
 
                 <div class="page-header">
                     <h1>
-                        莫的智慧请假文本生成系统Ver20201026<small>Powered by xqqy</small>
+                        莫的智慧请假文本生成系统Ver20201112<small>Powered by xqqy</small>
                     </h1>
                 </div>
                 <dl>
@@ -159,7 +159,8 @@
     function updateform() {
         var OutTimeUnix = $.myTime.DateToUnix($('#FormOutDate').val() + ' ' + $('#FormOutTime').val() + ":00");
         var InTimeUnix = $.myTime.DateToUnix($('#FormInDate').val() + ' ' + $('#FormInTime').val() + ":00");
-        if ($('#FormInTime').val().split(':')[0] < $('#FormOutTime').val().split(':')[0] && !$('#FormForce').is(':checked')) {//时间不对
+        
+        if (OutTimeUnix > InTimeUnix && !$('#FormForce').is(':checked')) {//时间不对
             $('#modalWJX').text('系统检测到返校时间比出校时间还早，请检查上下午设置');
             $('#modalWJX').css('color','red');
             $('#myModal').modal('show');
