@@ -32,7 +32,7 @@
 
                 <div class="page-header">
                     <h1>
-                        莫的智慧请假文本生成系统Ver20201112<small>Powered by xqqy</small>
+                        莫的智慧请假文本生成系统Ver20201112+<small>Powered by xqqy</small>
                     </h1>
                 </div>
                 <dl>
@@ -41,30 +41,32 @@
                     </dd>
                     <hr>
                     <dt>
-                        四小时内快速出校审批（有课的时候不批！）：
+                        审批提示：
                     </dt>
                     <dd>
-                        0、如在4小时以内，只需复制本段话并发给宿舍长；收到“同意，已报学校备案”并截图传问卷星系统<a
-                            href="https://www.wjx.cn/jq/92417424.aspx">https://www.wjx.cn/jq/92417424.aspx</a>即可出校。
+                        如四小时以上请假审批且不在周四，请同时联络班长。提前一天进行请假。在每天16:00的时候查看“掌上北工商”请假单
+                    </dd>
+                    <dd>
+                        如掌上北工商未销假，请忽略填写掌上北工商步骤并告知班长。在16：00时再次查看是否销假
+                    </dd>
+                    <dd>
+                        如需出京，请首先联络班长进行审批。
                     </dd>
                     <hr>
                     <dt>
-                        四小时以上标准出校审批（默认于每周一自动销假，每周记得回来写问卷星！提前一天请假！！！）：
+                        审批流程：
                     </dt>
                     <dd>
                         1、联络你的宿舍长（宿舍长联络班长）
                     </dd>
                     <dd>
-                        2、和宿舍长用下面的“大段话生成器”生成一个请假用大段话，发送给他，并让他回复“同意”
+                        2、和宿舍长用下面的“大段话生成器”生成一个请假用大段话，发送给宿舍长\班长，并让他回复“同意”
                     </dd>
                     <dd>
-                        3、将截图发送给班长
+                        3、将截图发送至问卷星系统<a href="https://www.wjx.top/jq/97116733.aspx">https://www.wjx.top/jq/97116733.aspx</a>，四小时以上请假还需要填写“掌上北工商”请假申请
                     </dd>
                     <dd>
-                        4、填写问卷星系统<a href="https://www.wjx.top/jq/90857482.aspx">https://www.wjx.top/jq/90857482.aspx</a>
-                    </dd>
-                    <dd>
-                        5、在返校后，填写<a
+                        4、在返校后，填写<a
                             href="https://www.wjx.cn/jq/91718594.aspx">https://www.wjx.cn/jq/91718594.aspx</a>以销假。如需第二天再请假出去请联络班长。
                     </dd>
                     <dt>
@@ -180,10 +182,10 @@
                 $('#myModal').modal('show');
                 return;
             }
-            $('#modalWJX').html('申请在四个小时内，向宿舍长复制上述文字后收到“同意，已报学校备案”;将截图上传至此即可出校<a href="https://www.wjx.cn/jq/92417424.aspx">https://www.wjx.cn/jq/92417424.aspx</a>');
+            $('#modalWJX').html('申请在四个小时内，向宿舍长复制上述文字后收到“同意，已报学校备案”;将截图上传至此即可出校<a href="https://www.wjx.top/jq/97116733.aspx">https://www.wjx.top/jq/97116733.aspx</a><br>返校后填写<a href="https://www.wjx.cn/jq/91718594.aspx">https://www.wjx.cn/jq/91718594.aspx</a>以销假。');
         } else {
             $('#modalOutType').text("四小时以上出校申请：")
-            $('#modalWJX').html('请填写填写问卷星系统<a href="https://www.wjx.top/jq/90857482.aspx">https://www.wjx.top/jq/90857482.aspx</a>和掌上北工商请假信息。截图发送给班长并等候审批。返校后需填写<a href="https://www.wjx.cn/jq/91718594.aspx">https://www.wjx.cn/jq/91718594.aspx</a>以销假。')
+            $('#modalWJX').html('申请在四个小时以上，向宿舍长复制上述文字后收到“同意”;同时填写“掌上北工商”系统。将截图上传至此即可出校<a href="https://www.wjx.top/jq/97116733.aspx">https://www.wjx.top/jq/97116733.aspx</a><br>返校后填写<a href="https://www.wjx.cn/jq/91718594.aspx">https://www.wjx.cn/jq/91718594.aspx</a>以销假。');
         }
         $('#modalName').text($('#FormName').val());
         $('#modalUID').text($('#FormUID').val());
