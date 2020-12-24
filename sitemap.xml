@@ -3,8 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://xqqy.github.io/post/meetings/2020-12-24%E4%BC%9A%E8%AE%AE%E7%BA%AA%E8%A6%81/</loc>
+    <lastmod>2020-12-24T00:12:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xqqy.github.io/post/%E5%A4%A7%E4%BA%8C%E4%B8%8A%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95%E5%AE%89%E6%8E%92/</loc>
+    <lastmod>2020-12-16T22:08:36+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://xqqy.github.io/post/meetings/2020-12-15%E4%BC%9A%E8%AE%AE%E7%BA%AA%E8%A6%81/</loc>
     <lastmod>2020-12-05T00:12:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://xqqy.github.io/post/meetings/2020-11-20%E4%BC%9A%E8%AE%AE%E7%BA%AA%E8%A6%81/</loc>
+    <lastmod>2020-11-20T00:12:00+08:00</lastmod>
   </url>
   
   <url>
@@ -148,10 +163,6 @@
   </url>
   
   <url>
-    <loc>https://xqqy.github.io/post/meetings/2020-11-20%E4%BC%9A%E8%AE%AE%E7%BA%AA%E8%A6%81/</loc>
-  </url>
-  
-  <url>
     <loc>https://xqqy.github.io/post/meetings/%E8%BE%85%E5%AF%BC%E5%91%98%E7%AD%94%E5%A4%8D/</loc>
   </url>
   
@@ -168,7 +179,7 @@
   
   <url>
     <loc>https://xqqy.github.io/post/</loc>
-    <lastmod>2020-12-05T00:12:00+08:00</lastmod>
+    <lastmod>2020-12-24T00:12:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -198,7 +209,7 @@
   
   <url>
     <loc>https://xqqy.github.io/categories/%E4%BC%9A%E8%AE%AE%E7%BA%AA%E8%A6%81/</loc>
-    <lastmod>2020-12-05T00:12:00+08:00</lastmod>
+    <lastmod>2020-12-24T00:12:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -246,7 +257,7 @@
   
   <url>
     <loc>https://xqqy.github.io/tags/%E5%A4%A7%E4%BA%8C%E4%B8%8A/</loc>
-    <lastmod>2020-10-12T20:03:16+08:00</lastmod>
+    <lastmod>2020-12-16T22:08:36+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -270,13 +281,13 @@
   
   <url>
     <loc>https://xqqy.github.io/tags/%E6%9C%9F%E6%9C%AB%E8%80%83%E8%AF%95/</loc>
-    <lastmod>2020-06-02T22:08:36+08:00</lastmod>
+    <lastmod>2020-12-16T22:08:36+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://xqqy.github.io/</loc>
-    <lastmod>2020-12-05T00:12:00+08:00</lastmod>
+    <lastmod>2020-12-24T00:12:00+08:00</lastmod>
     <priority>0</priority>
   </url>
   
