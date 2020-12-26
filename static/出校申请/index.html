@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>注会191</title>
+    <title>注会191班级请假系统</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./libs/bootstrap.min.css">
@@ -32,38 +32,39 @@
 
                 <div class="page-header">
                     <h1>
-                        莫的智慧请假文本生成系统Ver20201112+<small>Powered by xqqy</small>
+                        莫的智慧请假文本生成系统Ver20201226<small>Powered by xqqy</small>
                     </h1>
                 </div>
                 <dl>
                     <dd>
-                        通常而言，只需正确填写时间，系统将自动给出出校申请流程。<span style="color: red;">出京需向辅导员报备！</span>
+                        通常而言，只需正确填写时间，系统将自动给出出校申请流程。<span style="color: red;">最低审批权限现已更新至班长，所有非必要出校申请一律不通过！</span>
                     </dd>
                     <hr>
                     <dt>
                         审批提示：
                     </dt>
                     <dd>
-                        如四小时以上请假审批且不在周四，请同时联络班长。提前一天进行请假。在每天16:00的时候查看“掌上北工商”请假单
+                        <span style="color:red">无正当理由，请假将被驳回。</span>
                     </dd>
                     <dd>
-                        如掌上北工商未销假，请忽略填写掌上北工商步骤并告知班长。在16：00时再次查看是否销假
+                        如掌上北工商提示未销假，请忽略填写掌上北工商步骤并告知班长。在16：45时再次查看是否销假
                     </dd>
                     <dd>
-                        如需出京，请首先联络班长进行审批。
+                        如需出京，请面见辅导员进行审批。
                     </dd>
                     <hr>
                     <dt>
                         审批流程：
                     </dt>
                     <dd>
-                        1、联络你的宿舍长（宿舍长联络班长）
+                        1、四小时以上联络你的宿舍长（宿舍长联络班长）；四小时以内联络班长。
                     </dd>
                     <dd>
-                        2、和宿舍长用下面的“大段话生成器”生成一个请假用大段话，发送给宿舍长\班长，并让他回复“同意”
+                        2、用下面的“大段话生成器”生成一个请假用大段话，发送给宿舍长\班长，等候审批。
                     </dd>
                     <dd>
-                        3、将截图发送至问卷星系统<a href="https://www.wjx.top/jq/97116733.aspx">https://www.wjx.top/jq/97116733.aspx</a>，四小时以上请假还需要填写“掌上北工商”请假申请
+                        3、将截图发送至问卷星系统<a
+                            href="https://www.wjx.top/jq/97116733.aspx">https://www.wjx.top/jq/97116733.aspx</a>，四小时以上请假还需要填写“掌上北工商”请假申请
                     </dd>
                     <dd>
                         4、在返校后，填写<a
@@ -72,7 +73,37 @@
                     <dt>
                         如有疑问，请联络班长
                     </dt>
+                    <hr>
+                    <dt>
+                        常见必要、非必要出校理由：
+                    </dt>
+                    <dd>
+                       必要出校理由：
+                       <ul>
+                           <li>出校就诊</li>
+                           <li>购买必须用品，且该物品难以在校内购买到</li>
+                           <li>家庭发生重大意外事件，需前往。</li>
+                           <li>参加校外考试</li>
+                           <li>参加地点在校外且经学校认证的比赛、论坛等活动。</li>
+                       </ul>
+                    </dd>
+                    <dd>
+                        非必要出校理由：
+                        <ul>
+                            <li>购买水果</li>
+                            <li>和男/女朋友庆祝xx节</li>
+                            <li>任何部门的团建、聚餐活动</li>
+                            <li>参加漫展、cos聚会、Lolita茶会等活动</li>
+                            <li>撸猫猫<s>（你不介意的话可以来撸班长）</s></li>
+                        </ul>
+                     </dd>
+                    </dd>
+                    <dt>
+                        如有疑问，请联络班长
+                    </dt>
                 </dl>
+                <hr>
+                <h3>大段话生成器</h3>
                 <div class="form-group">
                     <label>姓名</label><input type="text" class="form-control" id="FormName" />
                 </div>
@@ -83,7 +114,10 @@
                     <label>宿舍号</label><input type="text" class="form-control" id="FormSID" />
                 </div>
                 <div class="form-group">
-                    <label>出校理由</label><input type="text" class="form-control" id="FormReason" />
+                    <label>出校理由</label><textarea type="text" class="form-control" id="FormReason" ></textarea>
+                </div>
+                <div class="form-group">
+                    <label>出校目的地（精确到区，出北京请面见辅导员进行确认）</label><input type="text" class="form-control" id="FormArea" />
                 </div>
                 <div class="form-group">
                     <label>出校日期</label><input type="date" class="form-control" id="FormOutDate" />
@@ -120,29 +154,41 @@
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
                         &times;
                     </button>
-                    <h4 class="modal-title" id="myModalLabel">
+                    <h3 class="modal-title" id="myModalLabel">
                         生成的结果
-                    </h4>
+                    </h3>
                 </div>
-                <div class="modal-body">
-                    下面为生成的请假申请信息
-                    <br>
-                    -------
-
-                    <br>
-                    <br>
-                    <br>
-                    <span id="modalOutType"></span>商学院注会191班；姓名：<span id="modalName"></span>；学号：<span
-                        id="modalUID"></span>；宿舍号：<span id="modalSID"></span>；我申请于：<span
-                        id="modalOutDate"></span>&nbsp&nbsp&nbsp<span id="modalOutTime"></span>到<span
-                        id="modalInDate"></span>&nbsp&nbsp&nbsp<span id="modalInTime"></span>因<span
-                        id="modalReason"></span>申请出校，请予批准
-                    <br>
-                    <br>
-                    <br>
-                    -------
-                    <br>
+                <div id="modal-body-normal" class="modal-body">
+                    <p>
+                        <span id="modalOutType"></span>
+                        商学院注会191班；姓名：<span id="modalName"></span>；
+                        学号：<span id="modalUID"></span>；
+                        宿舍号：<span id="modalSID"></span>；
+                        我申请于：<span id="modalOutDate"></span>&nbsp&nbsp&nbsp<span id="modalOutTime"></span>
+                        到<span id="modalInDate"></span>&nbsp&nbsp&nbsp<span id="modalInTime"></span>
+                        因<span id="modalReason"></span>
+                        申请出校前往<span id="modalArea"></span>，请予批准
+                    </p>
+                    ------- 
+                    <p>
                     <span id="modalWJX" style="font-weight: bold;"></span>
+                    <br>
+
+                        出校前将请假信息上传至:<a href="https://www.wjx.top/jq/97116733.aspx">https://www.wjx.top/jq/97116733.aspx</a>
+                        <br>
+                        返校后填写<a href="https://www.wjx.cn/jq/91718594.aspx">https://www.wjx.cn/jq/91718594.aspx</a>以销假。
+                        <br>
+                    </p>
+                    -------
+                    <p>
+                        出校时注意健康防护，提前确认目的地新冠疫情防控风险等级和准入准出规定。正确佩戴口罩，勤洗手，保卫生，不前往和本次出校目的无关的区域和地点。
+                        <br>
+                        如出现突发情况，及时联络班长、辅导员和班主任。
+                        <br><i style="color:gray">注会191班委祝您出入平安，一路顺风~</i>
+                    </p>
+                </div>
+                <div id="modal-body-error" class="modal-body" style="display: none;color:red">
+                    错误信息
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-dismiss="modal">OK
@@ -161,31 +207,37 @@
     function updateform() {
         var OutTimeUnix = $.myTime.DateToUnix($('#FormOutDate').val() + ' ' + $('#FormOutTime').val() + ":00");
         var InTimeUnix = $.myTime.DateToUnix($('#FormInDate').val() + ' ' + $('#FormInTime').val() + ":00");
-        
+        //初始化错误提示系统
+        $('#modal-body-error').css('display', 'none');
+        $('#modal-body-normal').css('display', 'block');
+
         if (OutTimeUnix > InTimeUnix && !$('#FormForce').is(':checked')) {//时间不对
-            $('#modalWJX').text('系统检测到返校时间比出校时间还早，请检查上下午设置');
-            $('#modalWJX').css('color','red');
+            $('#modal-body-error').text('系统检测到返校时间比出校时间还早，请检查上下午设置');
+            $('#modal-body-error').css('display', 'block');
+            $('#modal-body-normal').css('display', 'none');
             $('#myModal').modal('show');
             return;
         }
-        /*if () {//标准流程请当天的假
-            $('#modalWJX').text('系统检测到返校时间比出校时间还早，请检查上下午设置');
-            $('#modalWJX').css('color','red');
+        if ($('#FormReason').val().length < 10 && !$('#FormForce').is(':checked')) {//理由太短
+            $('#modal-body-error').text('系统检测到出校理由过于简短，将不被批准。请您在出校理由部分填写10个字以上内容。');
+            $('#modal-body-error').css('display', 'block');
+            $('#modal-body-normal').css('display', 'none');
             $('#myModal').modal('show');
             return;
-        }*/
-        if (InTimeUnix - OutTimeUnix <= 14400000 && !$('#FormForce').is(':checked')) {//四小时之内提示只报备，晚于23点不予批准。
+        }
+        if (InTimeUnix - OutTimeUnix <= 14400000 && !$('#FormForce').is(':checked')) {//四小时之内提示联络班长，晚于23点不予批准。
             $('#modalOutType').text("四小时内出校申请：")
             if ($('#FormInTime').val().split(':')[0] == 23 || $('#FormInTime').val().split(':')[0] == 00) {
-                $('#modalWJX').text('申请返校时间晚于23：00，不予批准！如确需请求，请勾选“禁用自动批准预检测和快速请假流程”');
-                $('#modalWJX').css('color','red');
+                $('#modal-body-error').text('申请返校时间晚于23：00，不予批准！如确需请求，请勾选“禁用自动批准预检测和快速请假流程”');
+                $('#modal-body-error').css('display', 'block');
+            $('#modal-body-normal').css('display', 'none');
                 $('#myModal').modal('show');
                 return;
             }
-            $('#modalWJX').html('申请在四个小时内，向宿舍长复制上述文字后收到“同意，已报学校备案”;将截图上传至此即可出校<a href="https://www.wjx.top/jq/97116733.aspx">https://www.wjx.top/jq/97116733.aspx</a><br>返校后填写<a href="https://www.wjx.cn/jq/91718594.aspx">https://www.wjx.cn/jq/91718594.aspx</a>以销假。');
+            $('#modalWJX').html('申请在四个小时内且计算机初审通过，向班长复制上述文字后收到“同意，已报学校备案”');
         } else {
             $('#modalOutType').text("四小时以上出校申请：")
-            $('#modalWJX').html('申请在四个小时以上，向宿舍长复制上述文字后收到“同意”;同时填写“掌上北工商”系统。将截图上传至此即可出校<a href="https://www.wjx.top/jq/97116733.aspx">https://www.wjx.top/jq/97116733.aspx</a><br>返校后填写<a href="https://www.wjx.cn/jq/91718594.aspx">https://www.wjx.cn/jq/91718594.aspx</a>以销假。');
+            $('#modalWJX').html('申请在四个小时内且计算机初审通过，向宿舍长复制上述文字后收到“同意”;同时填写“掌上北工商”系统。等待辅导员审批后即可出校。');
         }
         $('#modalName').text($('#FormName').val());
         $('#modalUID').text($('#FormUID').val());
@@ -195,8 +247,8 @@
         $('#modalInDate').text($('#FormInDate').val());
         $('#modalInTime').text($('#FormInTime').val());
         $('#modalReason').text($('#FormReason').val());
+        $('#modalArea').text($('#FormArea').val());
         $('#myModal').modal('show');
-
     }
 
 </script>
