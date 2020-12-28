@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>注会191喵呜～</title>
@@ -6,7 +6,11 @@
     <description>Recent content on 注会191喵呜～</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 24 Dec 2020 00:12:00 +0800</lastBuildDate><atom:link href="https://xqqy.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Dec 2020 00:12:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://xqqy.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>2020-12-24会议纪要</title>
       <link>https://xqqy.github.io/post/meetings/2020-12-24%E4%BC%9A%E8%AE%AE%E7%BA%AA%E8%A6%81/</link>
@@ -301,7 +305,7 @@
       <pubDate>Mon, 28 Oct 2019 19:15:40 +0800</pubDate>
       
       <guid>https://xqqy.github.io/%E5%91%A8%E5%AE%89%E6%8E%92/</guid>
-      <description>第15周 周安排 我们将于16周结课，17周进入考试周。请大家关注大二上期末安排 近期疫情反复，请大家注意身体健康，以防出现不可预料的问题。 作业事</description>
+      <description>第16周 周安排 我们将于16周结课，17周进入考试周。请大家关注大二上期末安排 近期疫情反复，所有非必要出校已被禁止。请大家注意身体健康，以防出</description>
     </item>
     
   </channel>
