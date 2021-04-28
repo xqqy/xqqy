@@ -1,4 +1,4 @@
-baseURL = "https://xqqy.gitee.io/"
+baseURL = "https://xqqy.netlify.app/"
 languageCode = "zh-cn"
 title = "注会191喵呜～"
 theme ="cleanwhite"
