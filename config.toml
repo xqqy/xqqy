@@ -6,8 +6,8 @@ hasCJKLanguage = true
 
 [params]
   author = "xqqy"
-  SEOTitle = "注会191班级网站"
-  description = "通知、资料还有卫星观测"
+  SEOTitle = "喵喵喵的小破站"
+  description = "记录大学的事件，曾经是一个班级的网站"
   slogan = "喵呜～"
   dateFormat = "1970年1月1日"
   title_404 = "你来到了没有猫咪的荒原 :("
@@ -18,9 +18,9 @@ hasCJKLanguage = true
   
   friends = true
   bookmarks = true
-  [[params.bookmark_link]]
-  title =  "周安排"
-  href =  "周安排/"
+  #[[params.bookmark_link]]
+  #title =  "周安排"
+  #href =  "周安排/"
   [[params.bookmark_link]]
   title =  "各种资料"
   href =  "各种资料/"
@@ -34,9 +34,9 @@ hasCJKLanguage = true
   title =  "出校申请"
   href =  "出校申请/"
   
-  [[params.addtional_menus]]
-  title =  "周安排"
-  href =  "周安排/"
+  #[[params.addtional_menus]]
+  #title =  "周安排"
+  #href =  "周安排/"
   [[params.addtional_menus]]
   title =  "各种资料"
   href =  "各种资料/"
@@ -49,7 +49,7 @@ hasCJKLanguage = true
   [[params.addtional_menus]]
   title =  "抽签程序"
   href =  "抽签程序/"
-    [[params.addtional_menus]]
+  [[params.addtional_menus]]
   title =  "出校申请"
   href =  "出校申请/"
   
@@ -68,7 +68,7 @@ hasCJKLanguage = true
   
 [Menus]
   main = [
-      {Name = "周安排", URL = "/周安排/"},
+      #{Name = "周安排", URL = "/周安排/"},
       {Name = "各种资料", URL = "/各种资料/"},
       {Name = "办事指南", URL = "/办事指南/"},
       #{Name = "卫星观测", URL = "/卫星观测/"},
