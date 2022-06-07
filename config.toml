@@ -1,7 +1,7 @@
 baseURL = "https://xqqy.netlify.app/"
 languageCode = "zh-cn"
-title = "注会191喵呜～"
-theme ="cleanwhite"
+title = "喵喵喵的小破站"
+theme ="ananke"
 hasCJKLanguage = true
 
 [params]
@@ -13,6 +13,7 @@ hasCJKLanguage = true
   title_404 = "你来到了没有猫咪的荒原 :("
   showtoc = false
   nextpost = false
+  background_color_class = "bg-gray"
 
   featured_tags=true
   
