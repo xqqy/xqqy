@@ -19,53 +19,6 @@ hasCJKLanguage = true
   
   friends = true
   bookmarks = true
-  #[[params.bookmark_link]]
-  #title =  "周安排"
-  #href =  "周安排/"
-  [[params.bookmark_link]]
-  title =  "各种资料"
-  href =  "各种资料/"
-  [[params.bookmark_link]]
-  title =  "办事指南"
-  href =  "办事指南/"
-  #[[params.bookmark_link]]
-  #title =  "卫星观测"
-  #href =  "卫星观测/"
-  [[params.bookmark_link]]
-  title =  "出校申请"
-  href =  "出校申请/"
-  
-  #[[params.addtional_menus]]
-  #title =  "周安排"
-  #href =  "周安排/"
-  [[params.addtional_menus]]
-  title =  "各种资料"
-  href =  "各种资料/"
-  [[params.addtional_menus]]
-  title =  "办事指南"
-  href =  "办事指南/"
-  #[[params.addtional_menus]]
-  #title =  "卫星观测"
-  #href =  "卫星观测/"
-  [[params.addtional_menus]]
-  title =  "抽签程序"
-  href =  "抽签程序/"
-  [[params.addtional_menus]]
-  title =  "出校申请"
-  href =  "出校申请/"
-  
-  [[params.friend_link]]
-  title = "北京工商大学官网"
-  href =  "http://www.btbu.edu.cn"
-  [[params.friend_link]]
-  title = "北京工商大学教务处"
-  href =  "http://jwc.btbu.edu.cn"
-  [[params.friend_link]]
-  title = "北京工商大学商学院"
-  href =  "http://sxy.btbu.edu.cn"
-  [[params.friend_link]]
-  title = "北京工商大学体育与艺术教学部"
-  href =  "http://sports.btbu.edu.cn"
   
 [Menus]
   main = [
@@ -74,6 +27,7 @@ hasCJKLanguage = true
       {Name = "办事指南", URL = "/办事指南/"},
       #{Name = "卫星观测", URL = "/卫星观测/"},
       {Name = "出校申请", URL = "/出校申请/"},
+      {Name = "答案比对", URL = "/ans-check/"},
   ]
 [markup]
-  defaultMarkdownHandler = "blackfriday"
+  defaultMarkdownHandler = "goldmark"
