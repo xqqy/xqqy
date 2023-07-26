@@ -1,0 +1,249 @@
+<html>
+
+<head>
+    <title>注会191班级请假系统</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./libs/bootstrap.min.css">
+    <script src="./libs/jquery.min.js"></script>
+    <script src="./libs/bootstrap.min.js"></script>
+    <script src="./libs/cookie.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-top navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">
+                        <a class="navbar-brand" href="../">返回主页</a>
+                    </span>
+                </button>
+                <a class="navbar-brand" href="../">返回主页</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+
+                <div class="page-header">
+                    <h1>
+                        莫的智慧请假文本生成系统Ver20201226<small>Powered by xqqy</small>
+                    </h1>
+                </div>
+                <dl>
+                    <dd>
+                        通常而言，现在班长换人啦！不过系统还是留着啦~
+                    </dd>
+                    <hr>
+                    <dt>
+                        审批提示：
+                    </dt>
+                    <dd>
+                        <span style="color:red">系统不再更新</span>
+                    </dd>
+                </dl>
+                <hr>
+                <h3>大段话生成器</h3>
+                <div class="form-group">
+                    <label>姓名</label><input type="text" class="form-control" id="FormName" />
+                </div>
+                <div class="form-group">
+                    <label>学号</label><input type="text" class="form-control" id="FormUID" />
+                </div>
+                <div class="form-group">
+                    <label>宿舍号</label><input type="text" class="form-control" id="FormSID" />
+                </div>
+                <div class="form-group">
+                    <label>出校理由</label><textarea type="text" class="form-control" id="FormReason" ></textarea>
+                </div>
+                <div class="form-group">
+                    <label>出校目的地（精确到区，出北京请面见辅导员进行确认）</label><input type="text" class="form-control" id="FormArea" />
+                </div>
+                <div class="form-group">
+                    <label>出校日期</label><input type="date" class="form-control" id="FormOutDate" />
+                </div>
+                <div class="form-group">
+                    <label>出校时间</label><input type="time" class="form-control" id="FormOutTime" />
+                </div>
+                <div class="form-group">
+                    <label>返校时间</label><input type="date" class="form-control" id="FormInDate" />
+                </div>
+
+                <div class="form-group">
+                    <label>返校时间</label><input type="time" class="form-control" id="FormInTime" />
+                </div>
+                <div class="form-group">
+                    <label>禁用自动批准预检测和快速请假流程<input type="checkbox" id="FormForce" /></label>
+                </div>
+                <button type="submit" class="btn btn-default" onclick="updateform()">生成</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <!-- 模态框（Modal） -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h3 class="modal-title" id="myModalLabel">
+                        生成的结果
+                    </h3>
+                </div>
+                <div id="modal-body-normal" class="modal-body">
+                    <p>
+                        <span id="modalOutType"></span>
+                        商学院注会191班；学生姓名：<span id="modalName"></span>；
+                        学号：<span id="modalUID"></span>；
+                        宿舍号：<span id="modalSID"></span>；
+                        我申请于：<span id="modalOutDate"></span>&nbsp&nbsp&nbsp<span id="modalOutTime"></span>
+                        到<span id="modalInDate"></span>&nbsp&nbsp&nbsp<span id="modalInTime"></span>
+                        因<span id="modalReason"></span>
+                        申请出校前往<span id="modalArea"></span>，请予批准
+                    </p>
+                    ------- 
+                    <p>
+                    <span id="modalWJX" style="font-weight: bold;"></span>
+                    <br>
+
+                        出校前将请假信息上传至:<a href="https://www.wjx.top/jq/97116733.aspx">https://www.wjx.top/jq/97116733.aspx</a>
+                        <br>
+                        返校后填写<a href="https://www.wjx.cn/jq/91718594.aspx">https://www.wjx.cn/jq/91718594.aspx</a>以销假。
+                        <br>
+                    </p>
+                    -------
+                    <p>
+                        出校时注意健康防护，提前确认目的地新冠疫情防控风险等级和准入准出规定。正确佩戴口罩，勤洗手，保卫生，不前往和本次出校目的无关的区域和地点。
+                        <br>
+                        如出现突发情况，及时联络班长、辅导员和班主任。
+                        <br><i style="color:gray">注会191班委祝您出入平安，一路顺风~</i>
+                    </p>
+                </div>
+                <div id="modal-body-error" class="modal-body" style="display: none;color:red">
+                    错误信息
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+
+
+</body>
+
+</html>
+
+<script>
+    function updateform() {
+        var OutTimeUnix = $.myTime.DateToUnix($('#FormOutDate').val() + ' ' + $('#FormOutTime').val() + ":00");
+        var InTimeUnix = $.myTime.DateToUnix($('#FormInDate').val() + ' ' + $('#FormInTime').val() + ":00");
+        //初始化错误提示系统
+        $('#modal-body-error').css('display', 'none');
+        $('#modal-body-normal').css('display', 'block');
+
+        if (OutTimeUnix > InTimeUnix && !$('#FormForce').is(':checked')) {//时间不对
+            $('#modal-body-error').text('系统检测到返校时间比出校时间还早，请检查上下午设置');
+            $('#modal-body-error').css('display', 'block');
+            $('#modal-body-normal').css('display', 'none');
+            $('#myModal').modal('show');
+            return;
+        }
+        /*if ($('#FormReason').val().length < 10 && !$('#FormForce').is(':checked')) {//理由太短
+            $('#modal-body-error').text('系统检测到出校理由过于简短，将不被批准。请您在出校理由部分填写10个字以上内容。');
+            $('#modal-body-error').css('display', 'block');
+            $('#modal-body-normal').css('display', 'none');
+            $('#myModal').modal('show');
+            return;
+        }*/
+        /*if (InTimeUnix - OutTimeUnix <= 14400000 && !$('#FormForce').is(':checked')) {//四小时之内提示联络班长，晚于23点不予批准。
+            $('#modalOutType').text("四小时内出校申请：")
+            if ($('#FormInTime').val().split(':')[0] == 23 || $('#FormInTime').val().split(':')[0] == 00) {
+                $('#modal-body-error').text('申请返校时间晚于23：00，不予批准！如确需请求，请勾选“禁用自动批准预检测和快速请假流程”');
+                $('#modal-body-error').css('display', 'block');
+            $('#modal-body-normal').css('display', 'none');
+                $('#myModal').modal('show');
+                return;
+            }
+            $('#modalWJX').html('申请在四个小时内且计算机初审通过，向班长复制上述文字后收到“同意，已报学校备案”');
+        } else {*/
+            $('#modalOutType').text("四小时以上出校申请：")
+            $('#modalWJX').html('申请在四个小时内且计算机初审通过，向宿舍长复制上述文字后收到“同意”;同时填写“掌上北工商”系统。等待辅导员审批后即可出校。');
+        //}
+        $('#modalName').text($('#FormName').val());
+        $('#modalUID').text($('#FormUID').val());
+        $('#modalSID').text($('#FormSID').val());
+        $('#modalOutDate').text($('#FormOutDate').val());
+        $('#modalOutTime').text($('#FormOutTime').val());
+        $('#modalInDate').text($('#FormInDate').val());
+        $('#modalInTime').text($('#FormInTime').val());
+        $('#modalReason').text($('#FormReason').val());
+        $('#modalArea').text($('#FormArea').val());
+        $('#myModal').modal('show');
+    }
+
+</script>
+
+<script>
+
+
+    (function ($) {
+        $.extend({
+            myTime: {
+                /**
+                 * 当前时间戳
+                 * @return <int>        unix时间戳(秒)
+                 */
+                CurTime: function () {
+                    return Date.parse(new Date()) / 1000;
+                },
+                /**
+                 * 日期 转换为 Unix时间戳
+                 * @param <string> 2014-01-01 20:20:20  日期格式
+                 * @return <int>        unix时间戳(秒)
+                 */
+                DateToUnix: function (string) {
+                    return Date.parse(string)
+                },
+                /**
+                 * 时间戳转换日期
+                 * @param <int> unixTime    待时间戳(秒)
+                 * @param <bool> isFull    返回完整时间(Y-m-d 或者 Y-m-d H:i:s)
+                 * @param <int>  timeZone   时区
+                 */
+                UnixToDate: function (unixTime, isFull, timeZone) {
+                    if (typeof (timeZone) == 'number') {
+                        unixTime = parseInt(unixTime) + parseInt(timeZone) * 60 * 60;
+                    }
+                    var time = new Date(unixTime * 1000);
+                    var ymdhis = "";
+                    ymdhis += time.getUTCFullYear() + "-";
+                    ymdhis += (time.getUTCMonth() + 1) + "-";
+                    ymdhis += time.getUTCDate();
+                    if (isFull === true) {
+                        ymdhis += " " + time.getUTCHours() + ":";
+                        ymdhis += time.getUTCMinutes() + ":";
+                        ymdhis += time.getUTCSeconds();
+                    }
+                    return ymdhis;
+                }
+            }
+        });
+    })(jQuery);
+
+
+</script>
